@@ -1,0 +1,109 @@
+/* IMPORT NUNITO FONT FROM GOOGLE FONTS  */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* END IMPORTS */
+
+/* CSS RESET */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* END CSS RESET */
+
+/* VARIABLES */
+
+:root {
+  /* Colors */
+  --FONT-COLOR: #FFF;
+
+  --conifer-50: #f1fce9;
+  --conifer-100: #e1f8cf;
+  --conifer-200: #c3f2a4;
+  --conifer-300: #8de457;
+  --conifer-400: #7ad942;
+  --conifer-500: #5abf23;
+  --conifer-600: #439818;
+  --conifer-700: #357417;
+  --conifer-800: #2d5c18;
+  --conifer-900: #294e19;
+  --conifer-950: #112b08;
+  
+  --BG-MAIN-COLOR: #1c1c1f;
+  --MITIC-COLOR: #202020;
+}
+
+/* END VARIABLES */
+
+header {
+  background-color: var(--conifer-600);
+  padding: 1rem;
+  color: var(--FONT-COLOR);
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  min-height: 100dvh;
+  background-color: var(--BG-MAIN-COLOR);
+}
+
+figcaption {
+  position: absolute;
+  left: -1000px;
+}
+
+.img-search-btn {
+  padding: 0.5rem;
+}
+
+.btn-search {
+  background-color: var(--BG-BTN-COLOR);
+  color: var(--FONT-COLOR);
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #f4eee0;
+  border-radius: 3px;
+}
+
+.summoner-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.summoner-icon-level-name {
+  color: var(--FONT-COLOR);  
+  font-size: 2rem;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.summoner-icon-level-name > span {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 3px 5px #00FF00;
+}
+
+.img-profile {
+  border-radius: 15%;
+}
+
+form > input {
+    outline: var(--conifer-700);
+}

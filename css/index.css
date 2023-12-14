@@ -1,0 +1,280 @@
+/* IMPORT NUNITO FONT FROM GOOGLE FONTS  */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* END IMPORTS */
+
+@font-face {
+  font-family: "Beaufort";
+  src: url(../fonts/BeaufortforLOL-Regular.otf);
+}
+
+/* CSS RESET */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Beaufort", sans-serif;
+  color: #fff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* END CSS RESET */
+
+/* Variables */
+
+:root {
+  /* Colors */
+  --FONT-COLOR: #fff;
+
+  --conifer-50: #f1fce9;
+  --conifer-100: #e1f8cf;
+  --conifer-200: #c3f2a4;
+  --conifer-300: #8de457;
+  --conifer-400: #7ad942;
+  --conifer-500: #5abf23;
+  --conifer-600: #439818;
+  --conifer-700: #357417;
+  --conifer-800: #2d5c18;
+  --conifer-900: #294e19;
+  --conifer-950: #112b08;
+
+  --BG-MAIN-COLOR: #1c1c1f;
+  --MITIC-COLOR: #202020;
+}
+
+/* General Styles */
+
+body {
+  position: relative;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  min-height: 10dvh;
+  background-color: var(--conifer-600);
+  padding: 1rem;
+  color: var(--FONT-COLOR);
+  text-align: center;
+}
+
+main {
+  background-color: var(--BG-MAIN-COLOR);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+form > * {
+  background-color: var(--BG-MAIN-COLOR);
+}
+
+button {
+  background-color: var(--BG-MAIN-COLOR);
+}
+
+label {
+  display: none;
+}
+
+footer {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--conifer-700);
+  padding: 1.5rem;
+}
+
+figure {
+  display: inline;
+  width: 25rem;
+  padding: 1.5rem; 
+} 
+
+header > img {
+  width: 2rem;
+}
+
+/* End General Styles */
+
+/* Form styles */
+
+.summoner-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px; 
+  margin-bottom: 30px;
+}
+
+.btn-region {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 9rem;
+  padding: 0.5rem;
+  border: 2px solid var(--conifer-400);
+}
+
+.inp-search {
+  padding: 0.5rem;
+  border: 2px solid var(--conifer-400);
+  outline: none;
+}
+
+.btn-search {
+  width: 3rem;
+  border: 2px solid var(--conifer-400);
+  padding: 0.5rem;
+}
+
+/* Edn form styles */
+
+/* Modal styles */
+
+.choose-region {
+  display: none;
+  padding: 1rem;
+  flex-flow: column nowrap;
+  position: absolute;
+  top: 5rem;
+  width: 20rem;
+  height: 30rem;
+  overflow: scroll;
+  overflow-x: hidden;
+  z-index: 100000;
+  background-color: #202020;
+  border: 4px solid var(--conifer-900);
+  font-weight: bolder;
+}
+
+.choose-region > button {
+  margin-top: 0.4rem;
+  border: 2px solid var(--conifer-400);
+  padding: 0.5rem;
+  font-weight: bolder;
+}
+
+.choose-region > button:hover {
+  transform: scale(1.1);
+  transition: 0.1s;
+}
+
+.opaco {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.exit-div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.exit {
+  border: none;
+}
+
+.exit:hover {
+  transition: 0.2s;
+  transform: rotateZ(90deg) scale(1.2); 
+}
+
+.choose-region > button:hover {
+  background-color: var(--conifer-800);
+}
+
+/* End Modal Styles */
+
+.icon-link{
+  width: 10rem;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 1rem;
+}
+
+.icon-link > span > a {
+  font-size: 2rem;
+}
+
+.icon-link > span:hover {
+  transform: scale(1.2); 
+  transition: 0.5s;
+}
+
+/* Random Champ Styles */
+
+.random-champ-section{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-color: var(--conifer-950);
+  padding: 0 1rem 1rem 1rem;
+  font-size: 1.5rem;
+}
+
+.random-champ-section > span {
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.champ-lore-container {
+  background-image: url("../img/example-icon.png");
+  background-size: cover;
+  opacity: 0.1;
+}
+
+/* End Random Champ Styles */
+
+/* Animations */
+
+.animate {
+  animation: 0.5s ease-in-out 0s 1 forwards normal slide;
+}
+
+@keyframes slide {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(180deg);
+  }
+}
+
+.antianimate {
+  animation: 0.5s ease-in-out 0s 1 forwards normal antislide;
+}
+
+@keyframes antislide {
+  0% {
+    transform: rotateZ(180deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+/* End animations */
+
+/* Usefull clases */
+
+.block {
+  display: block;
+}
+
+/* End usefullclases */
