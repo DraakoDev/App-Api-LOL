@@ -228,15 +228,33 @@ header > img {
   position: relative;
   font-size: 1.5rem;
   background: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 0;
+  z-index: 10;
 }
 
-.champ-splash {
+.splash-opacity {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -2;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(8px);
+}
+
+.champ-splash {
   margin: 0;
   padding: 0;
   max-width: 100%;
+}
+
+.text-container {
+  background-color: transparent;
 }
 
 .random-champ-splash{
@@ -245,16 +263,6 @@ header > img {
   height: auto;
   padding: 1rem 1rem 0rem 1rem;
 }
-
-.random-champ-splash-opacity {
-  object-fit: cover;
-  object-position: center 20%;
-  width: 100%;
-  height: 100%;
-  filter: blur(8px);
-  opacity: 0.3;
-}
-
 
 /* End Random Champ Styles */
 

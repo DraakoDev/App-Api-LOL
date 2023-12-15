@@ -75,7 +75,7 @@ const seeData = async () => {
     champLoreTag.textContent = randomChamp.lore;
     champTitleTag.textContent = randomChamp.title;
     champSplashTag.innerHTML = `<img src="${randomSplash}" alt="${randomChamp.name}" class="random-champ-splash">`;
-    opacitySplash.innerHTML = `<img src="${randomSplash}" alt="${randomChamp.name}" class="random-champ-splash-opacity"> ${opacitySplash.innerHTML}`;
+    opacitySplash.style.backgroundImage = "url(" + randomSplash + ")";
 }
 
 seeData();
