@@ -19,11 +19,11 @@
   color: #fff;
 }
 
-img {
+/* img {
   display: block;
   max-width: 100%;
   height: auto;
-}
+} */
 
 /* END CSS RESET */
 
@@ -105,6 +105,12 @@ header > img {
 }
 
 /* End General Styles */
+
+.hero-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 /* Form styles */
 
@@ -219,25 +225,36 @@ header > img {
 /* Random Champ Styles */
 
 .random-champ-section{
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  background-color: var(--conifer-950);
-  padding: 0 1rem 1rem 1rem;
+  position: relative;
   font-size: 1.5rem;
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.random-champ-section > span {
-  text-transform: uppercase;
-  font-weight: bolder;
-  font-style: italic;
+.champ-splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
 }
 
-.champ-lore-container {
-  background-image: url("../img/example-icon.png");
-  background-size: cover;
-  opacity: 0.1;
+.random-champ-splash{
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  padding: 1rem 1rem 0rem 1rem;
 }
+
+.random-champ-splash-opacity {
+  object-fit: cover;
+  object-position: center 20%;
+  width: 100%;
+  height: 100%;
+  filter: blur(8px);
+  opacity: 0.3;
+}
+
 
 /* End Random Champ Styles */
 

@@ -2,6 +2,7 @@ const champNameTag = document.getElementById("champ-name");
 const champSplashTag = document.getElementById("champ-splash");
 const champLoreTag = document.getElementById("champ-lore");
 const champTitleTag = document.getElementById("champ-title");
+const opacitySplash = document.getElementById("section-champ");
 
 /* Retorna la version actual del juego */
 
@@ -68,10 +69,13 @@ const seeData = async () => {
     const randomChamp = await getChampionFromKey(champKeys, champKeys.keys[randomKey]);
     console.log(randomChamp);
 
+    const randomSplash = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${randomChamp.id}_0.jpg`;
+
     champNameTag.textContent = randomChamp.name;
     champLoreTag.textContent = randomChamp.lore;
-    champSplashTag.innerHTML = `<img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${randomChamp.id}_0.jpg" alt="${randomChamp.name}" class="random-champ-splash">`;
     champTitleTag.textContent = randomChamp.title;
+    champSplashTag.innerHTML = `<img src="${randomSplash}" alt="${randomChamp.name}" class="random-champ-splash">`;
+    opacitySplash.innerHTML = `<img src="${randomSplash}" alt="${randomChamp.name}" class="random-champ-splash-opacity"> ${opacitySplash.innerHTML}`;
 }
 
 seeData();

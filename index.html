@@ -17,8 +17,8 @@
   </header>
 
   <main>
-    <figure>
-      <img src="img/baron.webp" alt="Hero Image">
+    <figure >
+      <img src="img/baron.webp" alt="Hero Image" class="hero-image">
     </figure>
 
     <form class="summoner-form">
@@ -34,13 +34,15 @@
 
     </form>
 
-    <section class="random-champ-section">
-      <span id="champ-title" class="champ-name block"></span>
-      <span id="champ-name" class="champ-name block"></span>
-      <figure id="champ-splash" class="champ-splash"></figure>
-      <div>
-        <p id="champ-lore"></p>
+    <section class="random-champ-section" id="section-champ">
+      <figure id="champ-splash" class="champ-splash"></figure> 
+      <div class="text-container">
+        <div class="title-container">
+          <span id="champ-title" class="champ-name block"></span>
+          <span id="champ-name" class="champ-name block"></span>
+        </div>
         <div class="champ-lore-container">
+          <p id="champ-lore"></p>
         </div>
       </div>
     </section>
