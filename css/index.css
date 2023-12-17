@@ -289,6 +289,10 @@ footer {
   text-decoration: none;
 }
 
+.champ-splash-container{
+  padding: 1rem;
+}
+
 .random-champ-splash{
   margin-left: auto;
   margin-right: auto;
@@ -339,7 +343,9 @@ footer {
 }
 
 .champ-lore {
+  font-size: 14px;
   font-family: "Spigel";
+  text-align: left;
 }
 
 
