@@ -138,6 +138,10 @@ footer {
   justify-content: center;
 }
 
+.hero-image {
+  width: 35rem;
+}
+
 /* Form styles */
 
 .form-container {
@@ -152,8 +156,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem;
   margin: 2rem 0 2rem 0;
+  padding: 1rem;  
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.19);
