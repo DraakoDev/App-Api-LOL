@@ -35,9 +35,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Beaufort-Regular", sans-serif;
   color: #fff;
+  font-family: "Spigel";
 }
+
 
 img {
   display: block;
@@ -65,10 +66,11 @@ img {
   --amazon-900: #1b392b;
   --amazon-950: #0e2019;
   
-  
-
   --BG-MAIN-COLOR: #1c1c1f;
   --MITIC-COLOR: #202020;
+
+  --BORDER-COLOR : #785A28;
+  --GRIS-FRIO: #1E282D
 }
 
 /* General Styles */
@@ -77,9 +79,12 @@ body {
   position: relative;
 }
 
-h1, h2{
-  font-family: "Beaufort-Bold";
+h1, h2, h3{
+  font-family: "Beaufort-Bold", sans-serif;
+}
 
+h2 > a {
+  font-family: "Beaufort-Bold", sans-serif;
 }
 
 header {
@@ -135,33 +140,52 @@ footer {
 
 /* Form styles */
 
-.summoner-form {
+.form-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+}
+
+.summoner-form { 
+  width: 85%;
+  background-color: var(--GRIS-FRIO);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 2rem 0 2rem 0;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.19);
+}
+
+.summoner-form > * {
+  background-color: transparent;
 }
 
 .btn-region {
   display: inline-flex;
   justify-content: space-around;
-  width: 9rem;
+  width: 30%;
   padding: 0.5rem;
-  border: 2px solid var(--amazon-400);
+  border: none;
 }
 
 .inp-search {
+  width: 70%;
   padding: 0.5rem;
-  border: 2px solid var(--amazon-400);
+  border: none;
   outline: none;
 }
 
 .btn-search {
-  width: 3rem;
-  border: 2px solid var(--amazon-400);
+  width: 10%;
+  border: none;
   padding: 0.5rem;
+  cursor: pointer;
 }
+
+
 
 /* Edn form styles */
 
