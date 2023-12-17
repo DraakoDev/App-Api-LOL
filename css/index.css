@@ -1,13 +1,24 @@
-/* IMPORT NUNITO FONT FROM GOOGLE FONTS  */
+/* IMPORT NUNITO FONT FROM GOOGLE FONTS AND ANOTHER FONTS  */
 
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
-/* END IMPORTS */
 
 @font-face {
-  font-family: "Beaufort";
-  src: url(../fonts/BeaufortforLOL-Regular.otf);
+  font-family: "Beaufort-Regular";
+  src: url(../fonts/BeaufortforLOL-OTF/BeaufortforLOL-Regular.otf);
 }
+
+@font-face {
+  font-family: "Beaufort-BoldItalic";
+  src: url(../fonts/BeaufortforLOL-OTF/BeaufortforLOL-BoldItalic.otf);
+}
+
+@font-face {
+  font-family: "Beaufort-Bold";
+  src: url(../fonts/BeaufortforLOL-OTF/BeaufortforLOL-Bold.otf);
+}
+
+/* END IMPORTS */
 
 /* CSS RESET */
 
@@ -15,7 +26,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Beaufort", sans-serif;
+  font-family: "Beaufort-Regular", sans-serif;
   color: #fff;
 }
 
@@ -55,6 +66,10 @@ img {
 
 body {
   position: relative;
+}
+
+h1, h2{
+  font-family: "Beaufort-Bold";
 }
 
 header {
@@ -100,7 +115,7 @@ footer {
 
 .hero-section {
   width: 100%;
-  min-height: 90vh;
+  padding: 1rem;
 }
 
 .hero-section > figure {
@@ -114,7 +129,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-grow: 8;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .btn-region {
@@ -266,16 +282,17 @@ footer {
   padding: 1rem;
 }
 
-.text-container > div > span{
-  text-transform: uppercase;
-}
-
-.text-container > div > span:last-child{
+.text-container > div > h1{
   font-size: 3rem;
   font-style: italic;
   font-weight: bolder;
   letter-spacing: 0.03rem;
   line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.text-container > div > h2{
+  text-transform: uppercase;
 }
 
 .title-container {
