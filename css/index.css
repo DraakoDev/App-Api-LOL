@@ -405,6 +405,7 @@ footer {
     grid-row: 2;
     margin: 1rem;
     overflow: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
   }
 
