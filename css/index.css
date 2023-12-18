@@ -404,7 +404,8 @@ footer {
   .text-container {
     grid-row: 2;
     margin: 1rem;
-    overflow: hidden;
+    overflow: scroll;
+    overflow-x: hidden;
   }
 
   .champ-splash-container {
