@@ -70,7 +70,10 @@ img {
   --MITIC-COLOR: #202020;
 
   --BORDER-COLOR : #785A28;
-  --GRIS-FRIO: #1E282D
+  --GRIS-FRIO: #1E282D;
+  --COLOR-GRIS: #1E2328;
+  --NEGRO-HEXTECH: #010A13;
+
 }
 
 /* General Styles */
@@ -197,7 +200,6 @@ footer {
 
 .choose-region {
   display: none;
-  padding: 1rem;
   flex-flow: column nowrap;
   position: absolute;
   top: 5rem;
@@ -205,20 +207,21 @@ footer {
   height: 30rem;
   overflow: scroll;
   overflow-x: hidden;
-  z-index: 100000;
-  background-color: #202020;
-  border: 4px solid var(--amazon-900);
+  z-index: 10000;
+  background-color: var(--MITIC-COLOR);
   font-weight: bolder;
 }
 
-.choose-region > button {
-  margin-top: 0.4rem;
-  border: 2px solid var(--amazon-400);
+.regions > div {
+  background-color: var(--GRIS-FRIO);
   padding: 0.5rem;
   font-weight: bolder;
+  text-align: center;
+  border-top: 3px solid var(--NEGRO-HEXTECH);
 }
 
-.choose-region > button:hover {
+.regions > div:hover {
+  background-color: var(--NEGRO-HEXTECH);
   transform: scale(1.1);
   transition: 0.1s;
 }
@@ -237,7 +240,7 @@ footer {
 .exit-div {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  padding: 1rem;
 }
 
 .exit {
@@ -386,3 +389,31 @@ footer {
 }
 
 /* End usefullclases */
+
+@media screen and (min-width: 768px){
+  .random-champ-section{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 34rem; 
+  }
+
+  .random-champ-section > h2 {
+    grid-column: span 2;
+  }
+
+  .text-container {
+    grid-row: 2;
+    margin: 1rem;
+    overflow: hidden;
+  }
+
+  .champ-splash-container {
+    grid-column: 2;
+  }
+
+  .random-champ-splash {
+    object-fit: scale-down;
+    height: 100%;
+  }
+
+}

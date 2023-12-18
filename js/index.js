@@ -1,4 +1,5 @@
 const chooseRegion = document.getElementById("choose-region");
+const regions = document.getElementById("regions")
 const regionTag = document.getElementById("region-tag");
 const btnRegion = document.getElementById("btn-region");
 const caret = document.getElementById("caret-icon");
@@ -48,12 +49,12 @@ const addButtons = () => {
   const fragment = document.createDocumentFragment();
 
   for (let i = 0; i < keys.length; i++) {
-    const btn = document.createElement("button");
+    const btn = document.createElement("div");
     btn.textContent = keys[i];
     fragment.append(btn);
   }
 
-  chooseRegion.appendChild(fragment);
+  regions.appendChild(fragment);
 };
 
 const closeChooseModal = () => {
