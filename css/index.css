@@ -390,11 +390,11 @@ footer {
 
 /* End usefullclases */
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 800px){
   .random-champ-section{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto 34rem; 
+    grid-template-rows: auto auto; 
   }
 
   .random-champ-section > h2 {
@@ -411,6 +411,10 @@ footer {
 
   .champ-splash-container {
     grid-column: 2;
+  }
+
+  .champ-lore {
+    font-size: 1.4rem;
   }
 
   .random-champ-splash {
