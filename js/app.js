@@ -61,6 +61,19 @@ const getChampionFromKey = async (champFullData, keyValue) => {
       return champFullData.data[keyValue];
   };
 
+const setRandomChampSplash = (splashUrl, randomChamp) => {
+  const fragment = document.createDocumentFragment();
+
+  const randomChampSplash = document.createElement("img");
+  randomChampSplash.src = splashUrl;
+  randomChampSplash.alt = randomChamp.name;
+  randomChampSplash.classList.add("random-champ-splash");
+
+  fragment.append(randomChampSplash);
+
+  champSplashTag.appendChild(fragment);
+}
+
 const seeData = async () => {
     const version = await getCurrentVersion();
     const champKeys = await getChampionFullData(version);
@@ -71,10 +84,12 @@ const seeData = async () => {
 
     const randomSplash = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${randomChamp.id}_0.jpg`;
 
+    setRandomChampSplash(randomSplash, randomChamp);
+
     champNameTag.textContent = randomChamp.name;
     champLoreTag.textContent = randomChamp.lore;
     champTitleTag.textContent = randomChamp.title;
-    champSplashTag.innerHTML = `<img src="${randomSplash}" alt="${randomChamp.name}" class="random-champ-splash">`;
+
     opacitySplash.style.backgroundImage = "url(" + randomSplash + ")";
 }
 
