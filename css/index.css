@@ -91,9 +91,6 @@ h2 > a {
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  min-height: 10dvh;
   background-color: var(--amazon-600);
   padding: 1rem;
   color: var(--FONT-COLOR);
@@ -117,7 +114,8 @@ button {
 }
 
 label {
-  display: none;
+  position: absolute;
+  left: -100px;
 }
 
 footer {
@@ -132,7 +130,6 @@ footer {
 /* End General Styles */
 
 .hero-section {
-  width: 100%;
   padding: 1rem;
 }
 
@@ -142,7 +139,7 @@ footer {
 }
 
 .hero-image {
-  width: 35rem;
+  width: 90%;
 }
 
 /* Form styles */
@@ -154,7 +151,7 @@ footer {
 }
 
 .summoner-form { 
-  width: 85%;
+  width: 80%; 
   background-color: var(--GRIS-FRIO);
   display: flex;
   justify-content: center;
@@ -191,8 +188,6 @@ footer {
   padding: 0.5rem;
   cursor: pointer;
 }
-
-
 
 /* Edn form styles */
 
@@ -252,27 +247,8 @@ footer {
   transform: rotateZ(90deg) scale(1.2); 
 }
 
-.choose-region > button:hover {
-  background-color: var(--amazon-800);
-}
-
 /* End Modal Styles */
 
-.icon-link{
-  width: 10rem;
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 1rem;
-}
-
-.icon-link > span > a {
-  font-size: 2rem;
-}
-
-.icon-link > span:hover {
-  transform: scale(1.2); 
-  transition: 0.5s;
-}
 
 /* Random Champ Styles */
 
@@ -352,6 +328,26 @@ footer {
 
 /* End Random Champ Styles */
 
+/* Footer Styles */
+
+.icon-link{
+  width: 10rem;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 1rem;
+}
+
+.icon-link > span > a {
+  font-size: 2rem;
+}
+
+.icon-link > span:hover {
+  transform: scale(1.2); 
+  transition: 0.5s;
+}
+
+/* End footer styles */
+
 /* Animations */
 
 .animate {
@@ -390,36 +386,14 @@ footer {
 
 /* End usefullclases */
 
-@media screen and (min-width: 800px){
-  .random-champ-section{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto auto; 
+@media screen and (min-width: 1024px){
+
+  .random-champ-data{
+    display: flex;
   }
 
-  .random-champ-section > h2 {
-    grid-column: span 2;
+  .text-container{
+    width: 40%; 
+    margin: 0; 
   }
-
-  .text-container {
-    grid-row: 2;
-    margin: 1rem;
-    overflow: scroll;
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-
-  .champ-splash-container {
-    grid-column: 2;
-  }
-
-  .champ-lore {
-    font-size: 1.4rem;
-  }
-
-  .random-champ-splash {
-    object-fit: scale-down;
-    height: 100%;
-  }
-
 }
