@@ -390,10 +390,16 @@ footer {
 
   .random-champ-data{
     display: flex;
+    flex-wrap: nowrap;
   }
 
   .text-container{
-    width: 40%; 
+    width: 40%;
     margin: 0; 
   }
+
+  .champ-lore {
+    font-size: 1.3rem;
+  }
+
 }

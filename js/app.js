@@ -58,8 +58,8 @@ Para funcionar, requiere como parametro el json que retorna getChampionFullData(
 */
 
 const getChampionFromKey = async (champFullData, keyValue) => {
-      return champFullData.data[keyValue];
-  };
+  return champFullData.data[keyValue];
+};
 
 const setRandomChampSplash = (splashUrl, randomChamp) => {
   const fragment = document.createDocumentFragment();
@@ -72,25 +72,35 @@ const setRandomChampSplash = (splashUrl, randomChamp) => {
   fragment.append(randomChampSplash);
 
   champSplashTag.appendChild(fragment);
-}
+};
 
-const seeData = async () => {
-    const version = await getCurrentVersion();
-    const champKeys = await getChampionFullData(version);
-    const keysKeys = Object.keys(champKeys.keys);            
-    const randomKey = keysKeys[Math.floor(Math.random() * keysKeys.length)];
-    const randomChamp = await getChampionFromKey(champKeys, champKeys.keys[randomKey]);
-    console.log(randomChamp);
+const getRandomChamp = async (champKeys) => {
+  const keysKeys = Object.keys(champKeys.keys);
+  const randomKey = keysKeys[Math.floor(Math.random() * keysKeys.length)];
+  const randomChamp = await getChampionFromKey(
+    champKeys,
+    champKeys.keys[randomKey]
+  );
 
-    const randomSplash = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${randomChamp.id}_0.jpg`;
+  return randomChamp;
+};
 
-    setRandomChampSplash(randomSplash, randomChamp);
+const setData = async () => {
+  const version = await getCurrentVersion();
+  const champKeys = await getChampionFullData(version);
+  const randomChamp = await getRandomChamp(champKeys);
 
-    champNameTag.textContent = randomChamp.name;
-    champLoreTag.textContent = randomChamp.lore;
-    champTitleTag.textContent = randomChamp.title;
+  console.log(randomChamp);
 
-    opacitySplash.style.backgroundImage = "url(" + randomSplash + ")";
-}
+  const randomSplashUrl = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${randomChamp.id}_0.jpg`;
 
-seeData();
+  setRandomChampSplash(randomSplashUrl, randomChamp);
+
+  champNameTag.textContent = randomChamp.name;
+  champLoreTag.textContent = randomChamp.lore;
+  champTitleTag.textContent = randomChamp.title;
+
+  opacitySplash.style.backgroundImage = "url(" + randomSplashUrl + ")";
+};
+
+setData();
