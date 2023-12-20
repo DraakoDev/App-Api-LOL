@@ -1,5 +1,5 @@
 const champNameTag = document.getElementById("champ-name");
-const champSplashTag = document.getElementById("champ-splash");
+const champSplashTag = document.getElementById("champ-data");
 const champLoreTag = document.getElementById("champ-lore");
 const champTitleTag = document.getElementById("champ-title");
 const opacitySplash = document.getElementById("section-champ");
