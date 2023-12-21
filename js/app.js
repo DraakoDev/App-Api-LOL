@@ -71,7 +71,8 @@ const setRandomChampSplash = (splashUrl, randomChamp) => {
 
   fragment.append(randomChampSplash);
 
-  champSplashTag.appendChild(fragment);
+  champSplashTag.insertBefore(fragment, champSplashTag.firstChild);
+
 };
 
 const getRandomChamp = async (champKeys) => {

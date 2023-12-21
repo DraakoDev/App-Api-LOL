@@ -183,6 +183,11 @@ footer {
 }
 
 .btn-search {
+  border: none;
+  cursor: pointer;
+}
+
+.btn{
   width: 10%;
   border: none;
   padding: 0.5rem;
@@ -270,6 +275,7 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: unset;
 }
 
 .random-champ-section > h2{
@@ -380,3 +386,24 @@ footer {
 }
 
 /* End usefullclases */
+
+/* Media */
+
+@media only screen and (min-width: 1020px) {
+
+  h1, h2, h3{
+    font-size: 2.5rem;
+  }
+
+  .text-container > div > h2{
+    font-size: 4rem;
+  } 
+  
+  .text-container > div > h3{
+    font-size: 1.6rem;       
+  }
+
+  .champ-lore {
+    font-size: 1.4rem;
+  }
+}

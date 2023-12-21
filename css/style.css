@@ -115,14 +115,16 @@ footer {
 
 .summoner-basic-data {
   background-color: var(--amazon-950);
-  font-size: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .profile-icon-container{
+  position: relative;
   width: 128px;
   height: 128px;
-  position: relative;
-  margin: 2rem;
+  grid-column-start: 1;
+  grid-row-start: 1;
 }
 
 .level {
@@ -130,7 +132,7 @@ footer {
   background-color: var(--COLOR-GRIS);
   padding: 0.5rem;
   border-radius: 20%;
-  left: 50%;
+  left: 50%; 
   top: 100%;
   transform: translate(-50%, -50%);
 }
