@@ -1,0 +1,30 @@
+/* IMPORTS */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+@font-face {
+  font-family: "Beaufort-Regular";
+  src: url(../fonts/BeaufortforLOL-OTF/BeaufortforLOL-Regular.otf);
+}
+
+@font-face {
+  font-family: "Beaufort-BoldItalic";
+  src: url(../fonts/BeaufortforLOL-OTF/BeaufortforLOL-BoldItalic.otf);
+}
+
+@font-face {
+  font-family: "Beaufort-Bold";
+  src: url(../fonts/BeaufortforLOL-OTF/BeaufortforLOL-Bold.otf);
+}
+
+@font-face {
+  font-family: "Spigel-SemiBold";
+  src: url(../fonts/Spiegel-OTF/Spiegel-SemiBold.otf);
+}
+
+@font-face {
+  font-family: "Spigel";
+  src: url(../fonts/Spiegel-OTF/Spiegel-Regular.otf);
+}
+
+/* END IMPORTS */

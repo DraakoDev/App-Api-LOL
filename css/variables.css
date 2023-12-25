@@ -1,0 +1,28 @@
+/* Variables */
+
+:root {
+  /* Colors */
+  --FONT-COLOR: #fff;
+
+  --amazon-50: #f1f8f4;
+  --amazon-100: #ddeee2;
+  --amazon-200: #bdddc8;
+  --amazon-300: #91c4a7;
+  --amazon-400: #62a580;
+  --amazon-500: #3d7f5d;
+  --amazon-600: #2f6c4e;
+  --amazon-700: #26563f;
+  --amazon-800: #204534;
+  --amazon-900: #1b392b;
+  --amazon-950: #0e2019;
+
+  --BG-MAIN-COLOR: #1c1c1f;
+  --MITIC-COLOR: #202020;
+
+  --BORDER-COLOR: #785a28;
+  --GRIS-FRIO: #1e282d;
+  --COLOR-GRIS: #1e2328;
+  --NEGRO-HEXTECH: #010a13;
+}
+
+/* END VARIABLES */

@@ -1,5 +1,5 @@
 const champNameTag = document.getElementById("champ-name");
-const champSplashTag = document.getElementById("champ-data");
+const champDataContainer = document.getElementById("champ-data-conatiner");
 const champLoreTag = document.getElementById("champ-lore");
 const champTitleTag = document.getElementById("champ-title");
 const opacitySplash = document.getElementById("section-champ");
@@ -12,11 +12,10 @@ const getCurrentVersion = async () => {
       "https://ddragon.leagueoflegends.com/api/versions.json"
     );
 
-    if (!versionResponse.ok) {
+    if (!versionResponse.ok)
       throw new Error(
         `Failed to fetch version data. Status: ${versionResponse.status}`
       );
-    }
 
     const versionData = await versionResponse.json();
 
@@ -27,10 +26,10 @@ const getCurrentVersion = async () => {
 };
 
 /* Retorna un JSON con toda la data del campeon, el JSON incluye una lista de llaves para llamar a cada campeon, 
-la lista de llaves se obtiene con .keys .
-
-Para funcionar, requiere como paramentro la version del juego.
-*/
+  la lista de llaves se obtiene con .keys .
+  
+  Para funcionar, requiere como paramentro la version del juego.
+  */
 
 const getChampionFullData = async (version) => {
   try {
@@ -53,9 +52,9 @@ const getChampionFullData = async (version) => {
 };
 
 /* Obtiene los datos del campeon llamado por el valor de la key.
-
-Para funcionar, requiere como parametro el json que retorna getChampionFullData(), y el valor de la key del campeon.
-*/
+  
+  Para funcionar, requiere como parametro el json que retorna getChampionFullData(), y el valor de la key del campeon.
+  */
 
 const getChampionFromKey = async (champFullData, keyValue) => {
   return champFullData.data[keyValue];
@@ -71,8 +70,7 @@ const setRandomChampSplash = (splashUrl, randomChamp) => {
 
   fragment.append(randomChampSplash);
 
-  champSplashTag.insertBefore(fragment, champSplashTag.firstChild);
-
+  champDataContainer.insertBefore(fragment, champDataContainer.firstChild);
 };
 
 const getRandomChamp = async (champKeys) => {

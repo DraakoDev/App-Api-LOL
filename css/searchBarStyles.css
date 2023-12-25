@@ -1,0 +1,83 @@
+/* Search summonerr bar styles */
+
+.search-summoner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.summoner-form {
+  width: 100%;
+  background-color: var(--GRIS-FRIO);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 2rem 0;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+}
+
+.summoner-form > * {
+  background-color: transparent;
+}
+
+.open-modal-region {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 30%;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.inp-search {
+  width: 70%;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.btn-search {
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  width: 10%;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+/* Edn Search summoner bar styles */
+
+/* Animations */
+
+.animate {
+    animation: 0.5s ease-in-out 0s 1 forwards normal slide;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    100% {
+      transform: rotateZ(180deg);
+    }
+  }
+  
+  .antianimate {
+    animation: 0.5s ease-in-out 0s 1 forwards normal antislide;
+  }
+  
+  @keyframes antislide {
+    0% {
+      transform: rotateZ(180deg);
+    }
+    100% {
+      transform: rotateZ(0deg);
+    }
+  }
+  
+  /* End animations */

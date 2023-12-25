@@ -1,0 +1,92 @@
+/* CSS RESET */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Spigel", sans-serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* END CSS RESET */
+
+h1,
+h2,
+h3,
+h4,
+a {
+  font-family: "Beaufort-Bold", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: var(--amazon-600);
+  padding: 1rem;
+  color: var(--FONT-COLOR);
+}
+
+main {
+  background-color: var(--BG-MAIN-COLOR);
+}
+
+.search-summoner-section{
+  margin: 0 auto;
+  width: 70%;
+}
+
+/* Summoner data styles */
+
+.summoner-basic-data {
+  background-color: var(--amazon-950);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.profile-icon-container {
+  position: relative;
+  width: 128px;
+  height: 128px;
+  margin: 2rem;
+}
+
+.user-name {
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: bolder;
+  letter-spacing: 0.03rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.user-tag {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+
+.level {
+  position: absolute;
+  background-color: var(--COLOR-GRIS);
+  padding: 0.5rem;
+  border-radius: 20%;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.img-profile {
+  border-radius: 30%;
+  border: 3px double var(--BORDER-COLOR);
+}
+/* End summoner data styles */
+
