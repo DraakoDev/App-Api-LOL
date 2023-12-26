@@ -1,3 +1,5 @@
+import { serversList } from "./servers.js";
+
 const openModalRegion = document.getElementById("open-modal-region");
 const regionsContainer = document.getElementById("regions-container");
 const caretIcon = document.getElementById("caret-icon");
@@ -6,33 +8,14 @@ const regionModal = document.getElementById("region-modal");
 const opacityChooseRegions = document.getElementById("opacity");
 const exitBtnModal = document.getElementById("exit-modal-btn");
 
-const serverList = [
-  "BR1",
-  "EUN1",
-  "EUW1",
-  "JP1",
-  "KR",
-  "LA1",
-  "LA2",
-  "NA1",
-  "OC1",
-  "TR1",
-  "RU",
-  "PH2",
-  "SG2",
-  "TH2",
-  "TW2",
-  "VN2",
-];
-
 const addButtons = () => {
   const fragment = document.createDocumentFragment();
 
-  for (let i = 0; i < serverList.length; i++) {
+  for (let i = 0; i < serversList.length; i++) {
     const btn = document.createElement("div");
-    btn.textContent = serverList[i];
+    btn.textContent = serversList[i];
     fragment.append(btn);
-  }
+  } 
 
   regionsContainer.appendChild(fragment);
 };

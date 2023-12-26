@@ -3,8 +3,8 @@
 .region-modal {
   display: none;
   flex-flow: column nowrap;
-  position: absolute;
-  top: 20rem;
+  position: fixed;
+  top: 16rem;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 20rem;

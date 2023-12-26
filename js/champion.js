@@ -1,29 +1,10 @@
+import { getCurrentVersion } from "./usefull.js";
+
 const champNameTag = document.getElementById("champ-name");
 const champDataContainer = document.getElementById("champ-data-conatiner");
 const champLoreTag = document.getElementById("champ-lore");
 const champTitleTag = document.getElementById("champ-title");
 const opacitySplash = document.getElementById("section-champ");
-
-/* Retorna la version actual del juego */
-
-const getCurrentVersion = async () => {
-  try {
-    const versionResponse = await fetch(
-      "https://ddragon.leagueoflegends.com/api/versions.json"
-    );
-
-    if (!versionResponse.ok)
-      throw new Error(
-        `Failed to fetch version data. Status: ${versionResponse.status}`
-      );
-
-    const versionData = await versionResponse.json();
-
-    return versionData[0];
-  } catch (error) {
-    console.log("Error in get version", error);
-  }
-};
 
 /* Retorna un JSON con toda la data del campeon, el JSON incluye una lista de llaves para llamar a cada campeon, 
   la lista de llaves se obtiene con .keys .
@@ -90,6 +71,7 @@ const setData = async () => {
   const randomChamp = await getRandomChamp(champKeys);
 
   console.log(randomChamp);
+  console.log(version);
 
   const randomSplashUrl = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${randomChamp.id}_0.jpg`;
 

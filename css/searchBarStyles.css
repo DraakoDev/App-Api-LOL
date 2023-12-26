@@ -10,8 +10,8 @@
   width: 100%;
   background-color: var(--GRIS-FRIO);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   margin: 2rem 0 2rem 0;
   padding: 1rem;
   border-radius: 20px;
@@ -23,28 +23,37 @@
 }
 
 .open-modal-region {
-  display: inline-flex;
+  width: 20%;
+  display: inline-flex; 
   justify-content: space-around;
-  width: 30%;
   padding: 0.5rem;
   border: none;
   cursor: pointer;
 }
 
-.inp-search {
-  width: 70%;
+.game-name {
+  width: 50%;
+  flex-grow: 1;
   padding: 0.5rem;
   border: none;
   outline: none;
 }
 
+.tag-line {
+  width: 20%;
+  padding: 0.5rem; 
+  border: none;
+  outline: none;
+}
+
 .btn-search {
+  width: 10%;
   border: none;
   cursor: pointer;
 }
 
 .btn {
-  width: 10%;
+
   border: none;
   padding: 0.5rem;
   cursor: pointer;

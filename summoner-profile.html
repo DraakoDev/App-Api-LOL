@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -25,12 +25,13 @@
     <section class="search-summoner-section">
       <div class="search-summoner-container">
         <form class="summoner-form">
-          <div id="open-modal-region" class="open-modal-region">
-            <span id="region-name">EUN1 </span>
+          <div id="open-modal-region" class="open-modal-region"> 
+            <span id="region-name">LAN</span>
             <span id="caret-icon" class="bi bi-caret-up-fill"></span>
           </div>
           
-          <input type="text" id="search" class="inp-search" placeholder="Summoner Name">
+          <input type="text" id="game-name" class="game-name" placeholder="Game Name">  
+          <input type="text" id="tag-line" class="tag-line" placeholder="#Tag">
           <button id="search-summoner" class="btn"><a href="summoner-profile.html"
             class="bi bi-search btn-search"></a></button>
           </form>
@@ -48,13 +49,14 @@
         <p>
           <h2 class="user-name" id="user-name">User name</h2>
           <br>
-          <h4 class="user-tag">Tag</h4>
+          <h4 class="user-tag" id="user-tag">Tag</h4>
         </p>
 
       </div>
     </section>
 
     <!-- Keep -->
+    <div id="test" style="width: 10px; height: 10px; background-color: red;"></div>
 
     <div id="region-modal" class="region-modal">
       <div class="exit-div-container">
@@ -82,7 +84,8 @@
     </div>
     <span class="block" id="sing"><i>&#169;</i></span>
   </footer>
-  <script src="js/searchSummonerBar.js"></script>
+  <script type="module" src="js/summoner.js"></script>
+  <script type="module" src="js/searchSummonerBar.js"></script>
   <script src="js/footer.js"></script>
 </body>
 

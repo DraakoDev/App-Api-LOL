@@ -39,8 +39,8 @@ main {
 }
 
 .search-summoner-section{
+  width: 90%;
   margin: 0 auto;
-  width: 70%;
 }
 
 /* Summoner data styles */
