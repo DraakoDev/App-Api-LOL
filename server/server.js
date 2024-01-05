@@ -1,4 +1,8 @@
-const cors = require("cors");
+require("dotenv").config();
+
+console.log(process.env.API_KEY_LOL);
+
+/* const cors = require("cors");
 const express = require("express");
 const axios = require("axios");
 
@@ -56,4 +60,4 @@ app.get("/", async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Servidor esta escuchando en http://localhost:${PORT}`);
-});
+}); */
